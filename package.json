@@ -1,5 +1,5 @@
 {
-  "name": "@stellarx/iamsec",
+  "name": "iamsec",
   "version": "1.0.0",
   "description": "IAMSec - Enterprise-grade Identity and Access Management (IAM) Security Framework for Next.js applications with authentication, authorization, RBAC, and comprehensive security features",
   "main": "./dist/index.js",
