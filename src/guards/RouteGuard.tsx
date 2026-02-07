@@ -11,7 +11,6 @@ import { useAuth } from '../hooks/useAuth';
 import { usePermissions } from '../hooks/usePermissions';
 import { canAccessRoute, getRouteConfig } from '../config/routes.config';
 import { getPermissionsForRoles } from '../config/roles.config';
-import { Box, CircularProgress, Typography } from '@mui/material';
 
 /**
  * Route Guard Props
@@ -128,19 +127,19 @@ export function RouteGuard({
     }
 
     return (
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        minHeight="100vh"
-        gap={2}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+          gap: '16px',
+        }}
       >
-        <CircularProgress />
-        <Typography variant="body2" color="text.secondary">
-          Loading...
-        </Typography>
-      </Box>
+        <div>Loading...</div>
+        <p style={{ color: '#666', fontSize: '14px' }}>Loading...</p>
+      </div>
     );
   }
 
@@ -151,19 +150,21 @@ export function RouteGuard({
     }
 
     return (
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        minHeight="100vh"
-        gap={2}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+          gap: '16px',
+        }}
       >
-        <Typography variant="h5">Unauthorized</Typography>
-        <Typography variant="body2" color="text.secondary">
+        <h2 style={{ margin: 0 }}>Unauthorized</h2>
+        <p style={{ color: '#666', fontSize: '14px' }}>
           You don't have permission to access this page.
-        </Typography>
-      </Box>
+        </p>
+      </div>
     );
   }
 
