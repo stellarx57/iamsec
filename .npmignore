@@ -1,0 +1,47 @@
+# Source files
+src/
+*.ts
+*.tsx
+!dist/**/*.d.ts
+
+# Config files
+tsconfig.json
+tsup.config.ts
+.eslintrc*
+.prettierrc*
+
+# Development files
+examples/
+node_modules/
+.git/
+.gitignore
+.DS_Store
+*.log
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Test files
+**/*.test.*
+**/*.spec.*
+__tests__/
+coverage/
+
+# Build artifacts
+*.tsbuildinfo
+.turbo/
+.next/
+
+# Documentation (keep only essential ones)
+documentation/
+*.draft.md
+
+# Environment files
+.env*
+!.env.example
+

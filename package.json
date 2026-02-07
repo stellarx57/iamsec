@@ -1,0 +1,123 @@
+{
+  "name": "@stellarx/iamsec",
+  "version": "1.0.0",
+  "description": "IAMSec - Enterprise-grade Identity and Access Management (IAM) Security Framework for Next.js applications with authentication, authorization, RBAC, and comprehensive security features",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.mjs",
+      "require": "./dist/core/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js"
+    },
+    "./guards": {
+      "types": "./dist/guards/index.d.ts",
+      "import": "./dist/guards/index.mjs",
+      "require": "./dist/guards/index.js"
+    },
+    "./middleware": {
+      "types": "./dist/middleware/index.d.ts",
+      "import": "./dist/middleware/index.mjs",
+      "require": "./dist/middleware/index.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.mjs",
+      "require": "./dist/providers/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "QUICK_REFERENCE.md",
+    "INTEGRATION_GUIDE.md",
+    "CONFIGURATION_GUIDE.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "iamsec",
+    "authentication",
+    "authorization",
+    "security",
+    "rbac",
+    "iam",
+    "nextjs",
+    "next.js",
+    "react",
+    "jwt",
+    "session-management",
+    "access-control",
+    "permissions",
+    "roles",
+    "csrf",
+    "rate-limiting",
+    "audit-logging",
+    "oauth",
+    "enterprise",
+    "owasp",
+    "nist",
+    "typescript"
+  ],
+  "author": "stellarx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stellarx57/iamsec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stellarx57/iamsec/issues"
+  },
+  "homepage": "https://github.com/stellarx57/iamsec#readme",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "next": "^14.0.0 || ^15.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@mui/material": {
+      "optional": true
+    },
+    "js-cookie": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/js-cookie": "^3.0.6",
+    "typescript": "^5.3.0",
+    "tsup": "^8.0.0",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
